@@ -1,0 +1,14 @@
+<settings>
+  <servers>
+    <server>
+      <id>central</id>
+      <configuration>
+        <ssl>
+          <keystoreType>BCFKS</keystoreType>
+          <truststoreType>BCFKS</truststoreType>
+        </ssl>
+      </configuration>
+    </server>
+  </servers>
+</settings>
+
