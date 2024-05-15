@@ -2,6 +2,7 @@ package com.example;
 
 import javax.net.ssl.SSLContext;
 import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
 import java.security.KeyManagementException;
 
 public class SetSslContext {
@@ -12,9 +13,8 @@ public class SetSslContext {
             sslContext.init(null, null, new java.security.SecureRandom());
             SSLContext.setDefault(sslContext);
             System.out.println("SSLContext set to BCFIPS successfully");
-        } catch (NoSuchAlgorithmException | KeyManagementException e) {
+        } catch (NoSuchAlgorithmException | KeyManagementException | NoSuchProviderException e) {
             e.printStackTrace();
         }
     }
 }
-
